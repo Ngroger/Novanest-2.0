@@ -1,0 +1,134 @@
+.client-form {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    gap: 50px;
+    height: auto;
+    align-self: stretch;
+    justify-content: center;
+    margin: 100px 0 50px 0;
+}
+
+.client-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.client-form-title {
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 30.8px;
+    text-align: center;
+}
+
+.client-form form input,
+.client-form textarea {
+    background-color: rgb(246, 246, 246);
+    padding: 16px 24px;
+    border: none;
+    margin-top: 16px;
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(20, 20, 20, 1);
+}
+
+/* Цвет текста плейсхолдера */
+.client-form form input::placeholder,
+.client-form textarea::placeholder {
+    color: rgba(20, 20, 20, 1);
+    /* Замените на желаемый цвет */
+}
+
+
+.client-form form>input,
+.client-form textarea {
+    font-family: "Inter";
+}
+
+.client-form form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.client-form-checkbox {
+    display: flex;
+    align-items: center;
+    /* Центрирование по вертикали */
+    gap: 10px;
+    /* Расстояние между чекбоксом и текстом */
+    width: 540px;
+    /* Ширина блока */
+    justify-content: center;
+    /* Расстояние от предыдущего элемента */
+    margin-bottom: 14px;
+}
+
+.client-form-checkbox label {
+    font-family: "Inter";
+    font-size: 12px;
+    color: rgb(125, 125, 125);
+    margin-top: 14px;
+}
+
+
+.client-form form button {
+    border: none;
+    box-shadow: 1px 1px 10px rgba(216, 216, 216, 0.4);
+    padding: 20px;
+    width: 100%;
+    background-color: transparent;
+    width: 540px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.client-form form button:hover {
+    background: rgba(244, 77, 51, 1);
+    color: #FFF;
+    transition: 0.3s;
+}
+
+.client-form-block {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-form-block img {
+    width: 250px;
+}
+
+.client-form .first-image {
+    align-items: start;
+
+}
+
+.client-form .second-image {
+    align-items: end;
+
+}
+
+.client-form-input {
+    outline: none;
+    width: 540px;
+}
+
+.comment-input {
+    outline: none;
+    width: 540px;
+}
+
+
+@media screen and (max-width: 1080px) {
+    .client-form-block.desktop {
+        display: none;
+    }
+
+    .client-form-block {
+        max-width: 90%;
+    }
+}

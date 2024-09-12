@@ -1,0 +1,117 @@
+/* Родительский контейнер для карточек */
+.logo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Стили карточки */
+.logo-item {
+    background-color: rgb(245, 245, 245);
+    font-family: "Inter";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    /* Позволяет карточке занимать всю высоту */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили изображения */
+.logo-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.logo-item-sale {
+    padding: 12px;
+    align-self: flex-start;
+    background-color: #000;
+    color: #FFF;
+    position: absolute;
+    font-size: 18px;
+}
+
+/* Стили для информации внутри карточки */
+.logo-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    flex-grow: 1;
+    /* Заставляет этот блок занимать доступное пространство */
+}
+
+.logo-item-name {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+
+.logo-item-category {
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.logo-item-price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.logo-item-price-container>*:not(:last-child) {
+    margin-right: 10px;
+    /* Добавляет отступ справа для всех элементов, кроме последнего */
+}
+
+.logo-item-old-price {
+    font-size: 18px;
+    text-decoration: line-through;
+    color: rgba(70, 70, 70, 0.5);
+    line-height: 23.4px;
+    font-weight: 400;
+}
+
+.logo-item-new-price {
+    font-size: 18px;
+    line-height: 31.2px;
+    font-weight: 400;
+}
+
+.logo-item button {
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    /* Убедитесь, что цвет текста виден на белом фоне */
+    box-shadow: 1px 1px 10px rgba(197, 197, 197, 0.4);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.logo-item button:hover {
+    background-color: rgba(244, 77, 51, 1);
+    /* Добавьте цвет фона при наведении */
+    color: #FFF;
+    box-shadow: rgba(244, 77, 51, 0.05);
+    /* Измените цвет текста при наведении */
+}
+
+.logo-item button:active {
+    background-color: #e0e0e0;
+    /* Добавьте цвет фона при нажатии */
+    box-shadow: 1px 1px 5px rgba(197, 197, 197, 0.6);
+    /* Уменьшите тень при нажатии */
+}
+
+.logo-item button:focus {
+    outline: 3px solid #007bff;
+    /* Добавьте стили для фокуса */
+    outline-offset: 2px;
+}
